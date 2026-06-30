@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocChat Groq</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cloudflare.com"></script>
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+    <header>
+        <h1>💬 DocChat AI</h1>
+    </header>
+    <main id="chatWindow">
+        <div class="msg bot">Bonjour ! Ajoutez un document (PDF, Excel, Image, Texte) et posez vos questions.</div>
+    </main>
+    <div id="filePreview" class="hidden">
+        <span id="fileInfo"></span><button onclick="clearFile()">❌</button>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <label title="Ajouter un document">📁
+                <input type="file" id="fileInput" accept=".txt,.pdf,.xlsx,.xls,.jpg,.jpeg,.png" onchange="handleFileSelect(event)">
+            </label>
+            <textarea id="userInput" rows="1" placeholder="Posez une question..."></textarea>
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
